@@ -1,16 +1,13 @@
 const express = require('express');
 const indexController = require('./app/controllers/indexController');
-const scoreController = require('./app/controllers/scoreController');
 const createController = require('./app/controllers/createController');
+const listController = require('./app/controllers/listController');
 
 const router = express.Router();
 
 router.get('/', indexController.getPage);
-
 router.get('/create', createController.getPage);
 router.post('/create', createController.create);
-
-router.get('/score', scoreController.getPage);
-router.post('/score', scoreController.transferTo);
+router.get('/list', listController.getPage);
 
 module.exports = router;

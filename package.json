@@ -1,7 +1,7 @@
 {
-  "name": "transaction",
+  "name": "conlangCreator",
   "version": "1.0.0",
-  "description": "hometask",
+  "description": "App that lets you create conlang",
   "main": "server.js",
   "scripts": {
     "test": "mocha tests/**/*.test.js --reporter spec",
