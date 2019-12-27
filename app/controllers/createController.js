@@ -6,7 +6,8 @@ exports.getPage = function (req, res) {
 
 exports.create = async function (req, res) {
   const name = req.body.name;
-  const language = new languageModel({ name });
-  language.save();
+  const consonants = req.body.consonants.split(',');
+  const vowels = req.body.vowels.split(',');
+  const language = await languageModel.create({ name, consonants, vowels });
   res.redirect('/list');
 };

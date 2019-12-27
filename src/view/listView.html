@@ -41,7 +41,7 @@
       <h3>List</h3>
 
         {% for l in languages %}
-          {{ l.name }}
+          <a href="/detail/{{ l._id }}">{{ l.name }}</a>
           <br>
         {% endfor %}
       </div>

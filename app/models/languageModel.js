@@ -3,6 +3,8 @@ const mongoose = require('./../../server').mongoose;
 
 const languageSchema = mongoose.Schema({
   name: String,
+  consonants: Array,
+  vowels: Array,
 });
 
 

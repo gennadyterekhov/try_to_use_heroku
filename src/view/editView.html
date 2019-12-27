@@ -39,39 +39,21 @@
         <hr>
 
         <div class="container-fluid">
-      <form action="/create" method="POST">
+      <form action="/edit/{{ language._id }}" method="POST">
         <div class="form-group">
             <h3><label for="name">Create</label></h3>
-          <input id="name" name="name" class="form-control" type="text" placeholder="Conlang name">
+          <input id="name" name="name" class="form-control" type="text" value="{{ language.name }}" >
         </div>
 
         <div class="form-group">
-        <input id="name" name="consonants" class="form-control" type="text" placeholder="consonants like this: p,t,k">
+        <input id="name" name="consonants" class="form-control" type="text" value="{{ language.consonants }}">
         </div>
         <div class="form-group">
-          <input id="name" name="vowels" class="form-control" type="text" placeholder="vowels like this: a,i,u">
+          <input id="name" name="vowels" class="form-control" type="text" value="{{ language.vowels }}">
         </div>
 
-        <!-- <div class="form-group"> 
-          <label for="recipient">Получатель:</label>
-          <select name="recipientId" id="recipientId" class="form-control selectpicker" data-show-subtext="true" data-live-search="true">
-            {% for user in users %}
-              <option value="{{ user._id }}">{{ user.name }}</option>
-            {% endfor %}
-          </select>
-        </div> -->
 
-
-        <!-- <div class="form-check">
-          <input type="radio" id="Оплата труда" name="type" value="work" checked>
-          <label for="Оплата труда">Оплата труда</label>
-        </div>
-        <div class="form-check">
-          <input type="radio" id="Оплата проектных услуг" name="type" value="project">
-          <label for="Оплата проектных услуг">Оплата проектных услуг</label>
-        </div> -->
-
-        <input type="submit" value="Create" class="btn btn-success">
+        <input type="submit" value="Edit" class="btn btn-success">
       </form>
     </div>
 
