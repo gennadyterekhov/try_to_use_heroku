@@ -4,7 +4,9 @@ const nunjucks = require('nunjucks');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
-const url = 'mongodb://localhost:27017/conlangDB';
+// mongodb://<dbuser>:<dbpassword>@ds257698.mlab.com:57698/heroku_p4ppxbjq
+// mongodb://localhost:27017/conlangDB
+const url = 'mongodb://gena:qwerty123@ds257698.mlab.com:57698/heroku_p4ppxbjq';
 mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true });
 module.exports.mongoose = mongoose;
 
